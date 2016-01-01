@@ -83,5 +83,3 @@ test:
 production:
   <<: *default
   database: LevaEtraz_production
-  username: LevaEtraz
-  password: <%= ENV['LEVAETRAZ_DATABASE_PASSWORD'] %>
