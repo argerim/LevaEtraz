@@ -46,3 +46,5 @@ group :development do
 end
 
 gem 'puma'
+
+gem 'active_model_serializers'
