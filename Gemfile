@@ -35,6 +35,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rspec-rails', '~> 3.0'
+  gem 'factory_girl_rails'
+  gem 'pry'
 end
 
 group :development do
@@ -50,3 +53,7 @@ gem 'puma'
 gem 'active_model_serializers'
 
 gem 'rack-cors', require: 'rack/cors'
+
+group :test do
+  gem 'shoulda-matchers', require: false
+end
