@@ -55,5 +55,5 @@ gem 'active_model_serializers'
 gem 'rack-cors', require: 'rack/cors'
 
 group :test do
-  gem 'shoulda-matchers', require: false
+  gem 'shoulda-matchers', '~> 3.0'
 end
