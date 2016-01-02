@@ -19,6 +19,14 @@ Nós solicitamos que você trabalhe no desenvolvimento desse sistema sozinho e n
 
 bom desafio!
 
+## Tecnologias
+
+Para o desafio foi criado um Webservices (REST API) com o framework ruby on rails.
+
+Principais gems do projeto: puma, rack-cors e active_model_serializers.
+
+Para o problema do caminho mais curto foi usando o algoritimo de Dijkstra.
+
 ## Endpoints
 
 **Endpoint listagem de mapas**
