@@ -11,25 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160101223058) do
+ActiveRecord::Schema.define(version: 20160102050615) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "citext"
 
   create_table "cities", force: :cascade do |t|
-    t.string   "name"
+    t.citext   "name"
     t.integer  "map_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   add_index "cities", ["map_id"], name: "index_cities_on_map_id", using: :btree
+  add_index "cities", ["name"], name: "index_cities_on_name", unique: true, using: :btree
 
   create_table "maps", force: :cascade do |t|
-    t.string   "name"
+    t.citext   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "maps", ["name"], name: "index_maps_on_name", unique: true, using: :btree
 
   create_table "routes", force: :cascade do |t|
     t.integer  "origin_id"
