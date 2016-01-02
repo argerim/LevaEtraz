@@ -33,7 +33,7 @@ class Api::V1::CitiesController < ApiController
   private
 
     def get_map
-      @map = Map.where(name: params[:map_name]).first_or_create
+      @map = Map.by_name(params[:map_name])
     end
 
     def get_city
