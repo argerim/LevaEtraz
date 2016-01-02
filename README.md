@@ -27,6 +27,15 @@ Principais gems do projeto: puma "(A Ruby Web Server)", rack-cors "(Rack Middlew
 
 Para o problema do caminho mais curto foi usando o algoritimo de Dijkstra.
 
+## Ambiente de Desenvolvmento
+    gem install bundler && bundle
+    rake db:setup
+    rails s
+
+## Ambiente de Testes
+    rake db:setup RAILS_ENV=test
+    rspec spec
+
 ## Endpoints
 
 **Endpoint listagem de mapas**
