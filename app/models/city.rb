@@ -5,4 +5,6 @@ class City < ActiveRecord::Base
   belongs_to :map
 
   has_many :destinations, foreign_key: :origin_id, dependent: :destroy, class_name: :Route
+
+  scope :by_name, -> (name) { where(name: name).first_or_create }
 end
