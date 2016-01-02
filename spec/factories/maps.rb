@@ -1,6 +1,8 @@
 FactoryGirl.define do
   factory :map do
-    name "RJ"
+    sequence :name do |n|
+      "RJ#{n}"
+    end
   end
 
 end
