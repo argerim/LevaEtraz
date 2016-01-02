@@ -12,7 +12,7 @@ describe Api::V1::CitiesController do
 
     it "returns the information about a reporter on a hash" do
       cities_response = json_response
-      expect(cities_response[:cities].length).to eq(5)
+      expect(cities_response[:cities].length).to eq(City.count)
     end
 
     it { expect(response).to be_success }
@@ -63,12 +63,12 @@ describe Api::V1::CitiesController do
 
       before :each do
         @city = create(:city)
-        put :update, {id: @city.to_param, city: attributes_for(:city, name: "A"), map_name: map.name }
+        put :update, {id: @city.to_param, city: attributes_for(:city, name: "J"), map_name: map.name }
       end
 
       it "renders the json representation for the city record just updated" do
         city_response = json_response
-        expect(city_response[:city][:name]).to eql("A")
+        expect(city_response[:city][:name]).to eql("J")
       end
 
       it { expect(response.status).to eql(201) }

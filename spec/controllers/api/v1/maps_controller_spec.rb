@@ -10,7 +10,7 @@ describe Api::V1::MapsController do
 
     it "returns the information about a reporter on a hash" do
       maps_response = json_response
-      expect(maps_response[:maps].length).to eq(5)
+      expect(maps_response[:maps].length).to eq(Map.count)
     end
 
     it { expect(response).to be_success }
