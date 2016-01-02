@@ -8,15 +8,14 @@ class City < ActiveRecord::Base
 
   scope :by_name, -> (name) { where(name: name).first_or_create }
 
-
   def self.all_destinations
     [].tap do |destinations|
       all.each do |city|
-        city.destinations.each do |route|
+        city.destinations.includes(:origin, :destination).each do |route|
           destinations << [route.origin.name.upcase, route.destination.name.upcase, route.distance]
         end
       end
     end
-    
   end
+
 end
