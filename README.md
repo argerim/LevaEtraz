@@ -56,3 +56,7 @@ bom desafio!
 **Endpoint criar rota**
 
     curl -vL -X POST -H "Content-Type:application/json" -H "Accept: application/vnd.levaetraz.v1" -d '{"route":{"origin":"A", "destination":"B", "map":"SP", "distance":"10"}}' http://localhost:3000/api/routes
+
+**Endpoint caminho mais curto**
+
+    curl -vL -X GET -H "Content-Type:application/json" -H "Accept: application/vnd.levaetraz.v1" -d '{"shortest_path":{"origin":"A", "destination":"D", "autonomy": 10, "fuel_prices": "2,5"}}' http://localhost:3000/api/shortest_path
