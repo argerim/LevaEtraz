@@ -29,6 +29,8 @@ Para o problema do caminho mais curto foi usando o algoritimo de Dijkstra.
 
 O projeto esta usando Ruby na versao 2.3.0 e como banco Postgres.
 
+Segue logo abaixo os endpoints para teste da API.
+
 ## Ambiente de Desenvolvmento
     gem install bundler && bundle
     rake db:setup
