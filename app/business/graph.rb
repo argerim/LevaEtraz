@@ -16,7 +16,7 @@ class Graph
     @routes.unshift([matrix.count])
   end
 
-  def cost
+  def distance
     @r[@end]
   end
 
