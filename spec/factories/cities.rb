@@ -1,6 +1,8 @@
 FactoryGirl.define do
   factory :city do
-    name "A"
+    sequence :name do |n|
+      "A#{n}"
+    end
     map
   end
 

@@ -45,7 +45,7 @@ describe Api::V1::MapsController do
         expect(map_response).to have_key(:errors)        
       end
       
-      it "renders the json errors on whye the user could not be created" do
+      it "renders the json errors on whye the map could not be created" do
         map_response = json_response
         expect(map_response[:errors]).to include("Name can't be blank")
       end
