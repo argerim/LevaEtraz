@@ -36,3 +36,19 @@ bom desafio!
 **Endpoint deletar mapa**
 
   curl -vL -X DELETE -H "Content-Type:application/json" -H "Accept: application/vnd.levaetraz.v1" http://localhost:3000/api/maps/1
+
+**Endpoint listagem de cidades**
+
+  curl -vL -X GET -H "Content-Type:application/json" -H "Accept: application/vnd.levaetraz.v1"  http://localhost:3000/api/cities
+
+**Endpoint criar cidade**
+
+  curl -vL -X POST -H "Content-Type:application/json" -H "Accept: application/vnd.levaetraz.v1" -d '{"city":{"name":"A"}, "map_name": "SP"}' http://localhost:3000/api/cities
+
+**Endpoint atualizar cidade**
+
+  curl -vL -X PUT -H "Content-Type:application/json" -H "Accept: application/vnd.levaetraz.v1" -d '{"city":{"name": "B"}, "map_name": "SP"}' http://localhost:3000/api/cities/1
+
+**Endpoint deletar cidade**
+
+  curl -vL -X DELETE -H "Content-Type:application/json" -H "Accept: application/vnd.levaetraz.v1" http://localhost:3000/api/cities/1
