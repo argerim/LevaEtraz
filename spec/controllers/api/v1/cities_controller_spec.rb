@@ -56,7 +56,6 @@ describe Api::V1::CitiesController do
     end
   end
 
-
   context "PUT #update" do
 
     context "when is successfully updated" do
