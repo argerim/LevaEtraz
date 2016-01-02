@@ -2,6 +2,7 @@ class Route < ActiveRecord::Base
   validates :origin_id, :destination_id, :distance, presence: true
   validates :destination_id, uniqueness: { scope: :origin_id }
   validates :origin_id, uniqueness: { scope: :destination_id }
+  validates_with DistinctRouteValidator
 
   validates :distance, numericality: { only_integer: true }
 
