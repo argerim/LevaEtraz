@@ -1,7 +1,7 @@
 class Api::V1::RoutesController < ApiController
   
   def create
-    route = Route.new(BuildRoute.new(origin_params).to_hash)
+    route = Route.new(BuildRoute.new(route_params).to_hash)
     if route.save
       render json: route, status: 201
     else
@@ -11,7 +11,7 @@ class Api::V1::RoutesController < ApiController
 
   private
 
-    def origin_params    
+    def route_params    
       params.permit(route: [:origin, :destination, :map, :distance])
     end
   
