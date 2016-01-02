@@ -52,3 +52,7 @@ bom desafio!
 **Endpoint deletar cidade**
 
     curl -vL -X DELETE -H "Content-Type:application/json" -H "Accept: application/vnd.levaetraz.v1" http://localhost:3000/api/cities/1
+
+**Endpoint criar rota**
+
+    curl -vL -X POST -H "Content-Type:application/json" -H "Accept: application/vnd.levaetraz.v1" -d '{"route":{"origin":"A", "destination":"B", "map":"SP", "distance":"10"}}' http://localhost:3000/api/routes
