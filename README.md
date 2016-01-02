@@ -23,7 +23,7 @@ bom desafio!
 
 Para o desafio foi criado um Webservices (REST API) com o framework ruby on rails.
 
-Principais gems do projeto: puma, rack-cors e active_model_serializers.
+Principais gems do projeto: puma "(A Ruby Web Server)", rack-cors "(Rack Middleware for handling Cross-Origin Resource Sharing (CORS), which makes cross-origin AJAX possible.)" e active_model_serializers "(serializar os dados)".
 
 Para o problema do caminho mais curto foi usando o algoritimo de Dijkstra.
 
